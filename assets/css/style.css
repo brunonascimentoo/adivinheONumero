@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+ p {
+    font-size: 1em;
+    font-family: 'roboto';
+}
+
+
+#adivinhe {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#titulo {
+    text-align: center;
+    padding: 20px;
+    width: 25%;
+    margin: 2% auto;
+    color: #fff;
+    font-family: 'Roboto';
+
+}
+
+#bola {
+    margin: 0 auto;
+}
+
+#adivinhe img {
+    width: 280px;
+    height: 350px;
+}
+
+
+.paragrafo {
+    color: #fff;
+    font-size: 2em;
+    font-family: 'roboto';
+    text-align: center;
+    padding: 10px;
+}
+
+.resultado {
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+
+#chute {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin: -20px auto;
+}
+
+#chute input {
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    margin: 0 auto;
+    outline: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+
+}
+
+input:focus {
+    border: 2px solid rgb(30, 0, 112);
+}
+
+
+#chute button {
+    width: 100px;
+    height: 45px;
+    margin: 0 auto;
+    border: none;
+    background-color: #ff0000;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+#chute button:hover {
+    background-color: #bb0d0d;
+
+}
+
+.borda {
+    border-bottom: 8px solid #222;
+}
+
+#contato {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: #666 ;
+}
+
+.sobre {
+    margin: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+.icone {
+    width: 50px;
+    height: 50px;
+    margin: 55px 30px;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.3s;
+}
+
+.icone:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+
+.acertou {
+    color: rgb(255, 0, 0);
+}

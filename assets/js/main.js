@@ -1,13 +1,12 @@
-const numeroRandomico = parseInt(Math.random() * 6);
 
-let msgErro = [
+const arrayMsgErro = [
     'Ops, errou',
     'Hmm, não foi dessa vez',
     'tente novamente',
     'Você errou, mas continue tentando'
 ];
 
-let msgNumeroInvalido = [
+const arrayMsgNumeroInvalido = [
 
     'Os numeros devem estar entre 0 a 5',
     'Você escolher um número inválido',
@@ -16,8 +15,14 @@ let msgNumeroInvalido = [
     'Tente escolher um número válido'
 ];
 
-const arrayErroRandom = msgErro[Math.floor(Math.random() * msgErro.length)];
-const numeroErradoRandom = msgNumeroInvalido[Math.floor(Math.random() * msgNumeroInvalido.length)];
+const arrayMsgAcerto = [
+    'Parabéns',
+    'Uau, você acertou essa.',
+    'Você acertou, muito bom.',
+    'Parabéns você acertou.',
+    'Parabén, esta se tornando um mentalista.'
+];
+
 
 
 const chute = document.querySelector('.chutar')
@@ -26,37 +31,28 @@ const resetar = document.querySelector('#chutao')
 
 
 chute.addEventListener('click', function chutar() {
-
+    const numeroRandomico = parseInt(Math.random() * 6);
+    const msgErroRandom = arrayMsgErro[Math.floor(Math.random() * arrayMsgErro.length)];
+    const msgNumeroErradoRandom = arrayMsgNumeroInvalido[Math.floor(Math.random() * arrayMsgNumeroInvalido.length)];
+    const msgSucesso = arrayMsgAcerto[Math.floor(Math.random() * arrayMsgAcerto.length)];
+    
     let resultados = document.querySelector("#resultado");
     let chute = parseInt(document.querySelector("#chutao").value);
 
 
     if (chute === numeroRandomico) {
-        resultados.innerText = "Parabéns você acertou!"
+        resultados.innerText = msgSucesso;
         resultados.classList.remove('acertou');
-
-        //timer para recarregamento da pagina 
-        setInterval(function () {
-            document.location.reload(true);
-        }, 10000)
 
 
     } else if (chute > 5 || chute < 0) {
-        resultados.innerText = numeroErradoRandom;
+        resultados.innerText = msgNumeroErradoRandom;
         resultados.classList.add('acertou');
-
-        setInterval(function () {
-            document.location.reload();
-        }, 2000)
 
 
     } else {
-        resultados.innerText = arrayErroRandom;
+        resultados.innerText = msgErroRandom;
         resultados.classList.add('acertou');
-
-        setInterval(function () {
-            document.location.reload();
-        }, 1500)
 
     }
 
